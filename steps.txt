@@ -1,0 +1,10 @@
+== docker shell
+docker-compose up -d
+
+docker-compose exec kafka bash
+/opt/kafka/bin/kafka-console-producer.sh --bootstrap-server 127.0.0.1:9092 \
+  --topic test-topic < /producer-data.txt
+
+
+== application shell
+nest start
